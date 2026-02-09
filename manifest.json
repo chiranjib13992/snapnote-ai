@@ -3,7 +3,8 @@
   "name": "SnapNote AI",
   "version": "1.0.0",
   "description": "One-click screenshot and note-taking Chrome extension with AI-powered insights.",
-  "permissions": ["tabs", "storage", "activeTab", "scripting"],
+  "permissions": ["tabs", "storage", "activeTab", "scripting", "downloads", "activeTab"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },

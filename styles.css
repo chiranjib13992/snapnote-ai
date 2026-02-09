@@ -1,15 +1,183 @@
+/* ===== Global ===== */
 body {
-  width: 280px;
-  padding: 10px;
-  font-family: Arial;
+  width: 320px;
+  padding: 12px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f6f8fb;
+  color: #1f2937;
 }
 
+/* ===== Buttons ===== */
 button {
   width: 100%;
-  margin: 5px 0;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-img {
-  width: 100%;
-  margin-top: 5px;
+/* Capture button */
+#captureBtn {
+  background: #e5e7eb;
+  color: #111827;
 }
+
+#captureBtn:hover {
+  background: #d1d5db;
+}
+
+/* Analysis button (primary) */
+#analysisBtn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+}
+
+#analysisBtn:hover {
+  opacity: 0.95;
+}
+
+#saveBtn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+}
+
+#saveBtn:hover {
+  opacity: 0.95;
+}
+/* ===== Image Preview ===== */
+#preview {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  object-fit: cover;
+}
+
+/* ===== Textarea ===== */
+#note {
+  width: 100%;
+  min-height: 110px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  resize: none;
+
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+
+  font-size: 13px;
+  line-height: 1.4;
+  color: #111827;
+
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#note::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus effect */
+#note:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+
+.capture-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-btn i {
+  font-size: 16px;
+  color: #333;
+}
+
+.icon-btn:hover {
+  background: #f2f2f2;
+}
+
+.shortcut-panel {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+.shortcut-category {
+  font-weight: 600;
+  margin: 8px 0 4px;
+  font-size: 12px;
+  color: #444;
+}
+
+.shortcut-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.shortcut-item i {
+  color: #555;
+}
+
+.shortcut-item kbd {
+  background: #eee;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+
+.shortcut-panel {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+

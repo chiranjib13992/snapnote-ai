@@ -2,12 +2,25 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
 </head>
 <body>
-  <button id="captureBtn">📸 Capture</button>
-  <img id="preview" />
-  <textarea id="note" placeholder="Add note..."></textarea>
-  <button id="saveBtn">💾 Save</button>
+<div class="capture-row">
+    <button id="captureBtn">Capture</button>
+
+     <button id="keyboardBtn" class="icon-btn" title="Keyboard input">
+    <i class="fa fa-keyboard-o"></i>
+  </button>
+  </div>  <img id="preview" />
+  <textarea id="note" placeholder="AI analysis will appear here..."></textarea>
+  <div id="shortcutPanel" class="shortcut-panel hidden"></div>
+
+  <button id="analysisBtn">Analysis</button>
+  <button id="saveBtn">Save</button>
 
   <script src="popup.js"></script>
 </body>
